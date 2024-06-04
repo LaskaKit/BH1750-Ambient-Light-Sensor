@@ -3,9 +3,9 @@
 * is used with ESP32 LPkit board.
 * ESP32-LPkit reads Lux values from BH1750 sensor 
 * and shows on serial monitor
-*
-* SDA - GPIO21
-* SCL - GPIO22
+*       ESP32-LPkit   ESP32-C3-DEVkit
+* SDA - GPIO21        GPIO8
+* SCL - GPIO22        GPIO10
 *
 * Made by (c) laskakit.cz 2023
 *
@@ -21,7 +21,7 @@ BH1750 lightMeter;
 void setup() {
   Serial.begin(115200);
 
-  Wire.begin(22,21);
+  Wire.begin(8,10);
   
   lightMeter.begin();
 
